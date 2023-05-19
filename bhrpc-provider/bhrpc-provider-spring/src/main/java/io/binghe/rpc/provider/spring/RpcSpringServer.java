@@ -20,6 +20,7 @@ import io.binghe.rpc.common.helper.RpcServiceHelper;
 import io.binghe.rpc.constants.RpcConstants;
 import io.binghe.rpc.protocol.meta.ServiceMeta;
 import io.binghe.rpc.provider.common.server.base.BaseServer;
+import io.binghe.rpc.threadpool.AsyncStartProviderThreadPool;
 import org.apache.commons.collections4.MapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,6 +98,6 @@ public class RpcSpringServer extends BaseServer implements ApplicationContextAwa
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        this.startNettyServer();
+        AsyncStartProviderThreadPool.submit(() -> this.startNettyServer());
     }
 }
