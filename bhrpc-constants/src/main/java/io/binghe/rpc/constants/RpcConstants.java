@@ -38,6 +38,25 @@ public class RpcConstants {
     public static final byte VERSION = 0x1;
 
     /**
+     * bhrpc配置文件
+     */
+    public static final String CONSUMER_YML_FILE_NAME = "bhrpc-consumer.yml";
+
+    /**
+     * bhrpc
+     */
+    public static final String BHRPC = "bhrpc";
+
+    /**
+     * binghe
+     */
+    public static final String BINGHE = "binghe";
+
+    /**
+     * consumer
+     */
+    public static final String CONSUMER = "consumer";
+    /**
      * REFLECT_TYPE_JDK
      */
     public static final String REFLECT_TYPE_JDK = "jdk";
@@ -208,7 +227,7 @@ public class RpcConstants {
     /**
      * 服务消费者默认的注册中心地址
      */
-    public static final String RPC_REFERENCE_DEFAULT_REGISTRYADDRESS = "127.0.0.1:2182";
+    public static final String RPC_REFERENCE_DEFAULT_REGISTRYADDRESS = "127.0.0.1:2181";
 
     /**
      * 服务消费者默认负载均衡类型
