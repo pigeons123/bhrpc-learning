@@ -37,7 +37,7 @@ import java.util.Map;
  * @version 1.0.0
  * @description RPC 服务提供者的自动配置类，配置优先级：服务消费者字段上配置的@RpcReference注解属性 > yml文件 > @RpcReference默认注解属性
  */
-@Configuration
+@Configuration(value = "springBootConsumerAutoConfiguration")
 @EnableConfigurationProperties
 public class SpringBootConsumerAutoConfiguration {
 

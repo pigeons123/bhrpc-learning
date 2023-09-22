@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConsumerDemoServiceImpl implements ConsumerDemoService {
 
-    @RpcReference(registryType = "zookeeper", registryAddress = "127.0.0.1:2181", loadBalanceType = "zkconsistenthash", version = "1.0.0", group = "binghe", serializationType = "protostuff", proxy = "cglib", timeout = 30000, async = false, oneway = false, reflectType = "jdk", fallbackClass = FallbackDemoServcieImpl.class)
+    @RpcReference(registryType = "zookeeper", /*registryAddress = "127.0.0.1:2181", initRpcClient = true,*/ loadBalanceType = "zkconsistenthash", version = "1.0.0", group = "binghe", serializationType = "protostuff", proxy = "cglib", timeout = 30000, async = false, oneway = false, reflectType = "jdk", fallbackClass = FallbackDemoServcieImpl.class)
     private DemoService demoService;
 
     @Override

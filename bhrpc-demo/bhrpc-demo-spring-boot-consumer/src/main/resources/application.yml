@@ -5,7 +5,7 @@ bhrpc:
   binghe:
     consumer:
       # zookeeper server
-      registryAddress: 127.0.0.1:2181
+      registryAddress: 192.168.0.106:2181
       # registry center type, zookeeper/nacos/apoll/etcd/eureka
       registryType: zookeeper
       # registry loadbalance type: zkconsistenthash
@@ -37,9 +37,9 @@ bhrpc:
       # resultCacheExpire
       resultCacheExpire: 10000
       # enableDirectServer
-      enableDirectServer: true
+      enableDirectServer: false
       # directServerUrl
-      directServerUrl: 127.0.0.1:27880
+      directServerUrl: 127.0.0.1:20880
       # enableDelayConnection
       enableDelayConnection: true
       # corePoolSize

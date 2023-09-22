@@ -233,7 +233,9 @@ public class RpcClient {
         this.totalFailure = totalFailure;
         this.fusingMilliSeconds = fusingMilliSeconds;
         this.exceptionPostProcessorType = exceptionPostProcessorType;
-        this.registryService = this.getRegistryService(registryAddress, registryType, registryLoadBalanceType);
+        if (!enableDirectServer){
+            this.registryService = this.getRegistryService(registryAddress, registryType, registryLoadBalanceType);
+        }
         this.concurrentThreadPool = ConcurrentThreadPool.getInstance(corePoolSize, maximumPoolSize);
     }
 

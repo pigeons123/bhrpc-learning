@@ -208,7 +208,7 @@ public class RpcConstants {
     /**
      * 服务消费者默认的注册中心地址
      */
-    public static final String RPC_REFERENCE_DEFAULT_REGISTRYADDRESS = "127.0.0.1:2181";
+    public static final String RPC_REFERENCE_DEFAULT_REGISTRYADDRESS = "127.0.0.1:2182";
 
     /**
      * 服务消费者默认负载均衡类型
